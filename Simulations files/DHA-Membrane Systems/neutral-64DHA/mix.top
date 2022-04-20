@@ -1,0 +1,37 @@
+;
+; Example topology file for MARTINI 2.1
+;
+
+; First include the file containing all particle definitions,
+; the interaction matrix, plus the topology for water.
+
+#include "toppar/martini_v2.1.itp"
+
+; Then include the file(s) containing the topologies of other
+; molecules present in your system.
+
+#include "toppar/DHA0.itp"
+#include "toppar/DPPC.itp"
+#include "toppar/DUPC.itp"
+#include "toppar/CHOL.itp"
+#include "toppar/ions.itp"
+
+; Define a name for your system (x% compared to the upper leaflet)
+
+[ system ]
+Three-compnent-lipid-membrane+64DHA
+
+; Define the composition of your system
+; The molecule names should correspond to those defined in the itp file(s).
+
+[ molecules ]
+DHA             64
+DPPC           143
+DUPC            86
+CHOL            57
+DPPC           143
+DUPC            86
+CHOL            57
+W            20552
+SOD            226
+CLA            226

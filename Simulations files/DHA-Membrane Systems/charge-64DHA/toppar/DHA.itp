@@ -1,0 +1,40 @@
+;;;;;; Martini lipid topology for docosahexaenoic (C22:6) acid (DHA)
+;
+; Description:
+;   A general carboxylic acid Martini model for docosahexaenoic (C22:6) acid with unprotonated (charged) headgroup.
+; Parameterization:
+;   Follows similar rules as the standard Martini 2.0 lipid definitions but with a Qa bead as headgroup.
+; Reference(s): 
+;   S.J. Marrink, A.H. de Vries, A.E. Mark. Coarse grained model for semi-quantitative lipid simulations. JPC-B, 108:750-760, 
+;   2004. doi:10.1021/jp036508g 
+;   S.J. Marrink, H.J. Risselada, S. Yefimov, D.P. Tieleman, A.H. de Vries. The MARTINI force field: coarse grained model for 
+;   biomolecular simulations. JPC-B, 111:7812-7824, 2007. doi:10.1021/jp071097f
+; 
+
+[ moleculetype ]
+; molname      nrexcl
+  DHA         1
+
+[ atoms ]
+; id 	type 	resnr 	residu 	atom 	cgnr 	charge   mass
+  1 	Qa 	1 	DHA 	COO 	1   -1 
+  2 	C4 	1 	DHA 	D1  	2 	0 
+  3 	C4 	1 	DHA 	D2  	3 	0 
+  4 	C4 	1 	DHA 	D3  	4 	0 
+  5 	C4 	1 	DHA 	D4  	5 	0
+  6 	C4 	1 	DHA 	D5  	6 	0  
+
+[ bonds ]
+; i j 	funct 	length 	force.c.
+  1  2 	1 	0.47 	1250
+  2  3 	1 	0.47 	1250
+  3  4 	1 	0.47 	1250
+  4  5 	1 	0.47 	1250
+  5  6 	1 	0.47 	1250
+
+[ angles ]
+; i j k 	funct 	angle 	force.c.
+  1  2  3 	2 	100.0 	10.0 
+  2  3  4 	2 	100.0 	10.0 
+  3  4  5 	2 	100.0 	10.0 
+  4  5  6 	2 	100.0 	10.0 
